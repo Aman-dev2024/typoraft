@@ -1,4 +1,4 @@
-Typoraft
+## Typoraft
 A clean and simple text-editor built with react. Write, edit and craft the text
 
 ## 🚀 Features
@@ -12,12 +12,13 @@ A clean and simple text-editor built with react. Write, edit and craft the text
 8) Light/Dark toggle
 
 ## 🛠️ Tech Stack
-1) Frontend: React
-2) Styling: CSS, Bootstrap
-3) Language: JavaScript (ES6+)
+1) **Frontend**: React
+2) **Styling**: CSS, Bootstrap
+3) **Language**: JavaScript (ES6+)
 
 ## How To Use
-1) Clone the repository: git clone https://github.com/Aman-dev2024/typoraft.git
+1) **Clone the repository** 
+   git clone https://github.com/Aman-dev2024/typoraft.git
 2) Navigate into the project folder
    cd typoraft
 3) Install dependencies
