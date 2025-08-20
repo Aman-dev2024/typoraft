@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Textarea from './components/Textarea';
 import Footer from './components/Footer';
 import { useState } from 'react';
+import Alert from './components/Alert';
 
 function App() {
   const[mode,setMode]=useState("light")
@@ -12,18 +13,31 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor="black";
       document.body.style.color="white";
+      showAlert("Dark mode enable","success")
     }
     else if(mode=="dark"){
       setMode("light");
       document.body.style.backgroundColor="white";
       document.body.style.color="black";
+      showAlert("Light mode enable","success")
     }
 
+  }
+  const[alert,setAlert]=useState(null)
+  const showAlert=(message,type)=>{
+    setAlert({
+      message:message,
+      type:type
+    })
+    setTimeout(()=>{
+      setAlert(null)
+    },2000);
   }
   return (
     <>
     <Navbar mode={mode} toggle={toggle}></Navbar>
-    <Textarea mode={mode}></Textarea>
+    <Alert alert={alert}></Alert>
+    <Textarea mode={mode} showAlert={showAlert}></Textarea>
     <Footer mode={mode}></Footer>
     </>
   );

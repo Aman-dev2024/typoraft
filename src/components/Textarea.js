@@ -1,21 +1,45 @@
 import React, { useState } from 'react'
 
-export default function Textarea() {
+export default function Textarea({showAlert}) {
   const changeTextColor=()=>{
     document.getElementById("floatingTextarea2").style.color="orange";
+    if(text!=""){
+    showAlert("Text change to orange color","success");
+    }
+    else{
+      showAlert("Enter the text","warning");
+    }
   }
   const[text,setText]=useState("");
   const changeTextToUpperCase=()=>{
     setText(text.toUpperCase())
+    if(text!=""){
+    showAlert("Text change to UpperCase","success");
+    }
+    else{
+      showAlert("Enter the text","warning");
+    }
   }
   const changeCase=(e)=>{
     setText(e.target.value)
   }
   const ChangeTextToItalic=()=>{
     document.getElementById("floatingTextarea2").style.fontStyle="italic";
+    if(text!=""){
+    showAlert("Text change to UpperCase","success");
+    }
+    else{
+      showAlert("Enter the text","warning");
+    }
   }
   const clearText=()=>{
     setText("")
+    if(text==""){
+      showAlert("Enter the the text","warning")
+    }
+    else{
+    showAlert("Text cleared","success");
+    }
   }
   return (
     <div>
