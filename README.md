@@ -10,6 +10,7 @@ A clean and simple text-editor built with react. Write, edit and craft the text
 6) Count text
 7) Count Letters
 8) Light/Dark toggle
+9) Alert
 
 ## 🛠️ Tech Stack
 1) **Frontend**: React
@@ -25,3 +26,5 @@ A clean and simple text-editor built with react. Write, edit and craft the text
    npm install
 4) Start the development server
    npm start
+5) Enter the text and click on button which you want to do with text
+6) You will get alert when click on button
